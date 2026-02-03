@@ -39,6 +39,7 @@ export default function Navigation() {
   }, []);
 
   const scrollToSection = (id: string) => {
+    if (typeof window === 'undefined') return;
     const element = document.getElementById(id);
     if (element) {
       // Responsive offset based on screen size
