@@ -14,45 +14,89 @@ interface Project {
   category: string;
 }
 
-// Sample data - replace with your actual projects
+// Projects data
 const projects: Project[] = [
+  // Web Projects
   {
     id: '1',
-    title: 'Project One',
-    description: 'A fantastic project that solves real-world problems.',
+    title: 'Personal Website',
+    description: 'A modern, responsive portfolio website showcasing my experience, projects, and skills with dark/light mode support.',
     category: 'web',
-    skills: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS'],
-    link: 'https://example.com',
-    github: 'https://github.com/example',
+    skills: ['TypeScript', 'CSS', 'JavaScript'],
+    link: 'https://jasmitayechuri-dev.vercel.app',
+    github: 'https://github.com/JasmitaY/jasmitayechuri.dev',
   },
   {
     id: '2',
-    title: 'Project Two',
-    description: 'An innovative solution using cutting-edge technology.',
-    category: 'mobile',
-    skills: ['React Native', 'TypeScript', 'Firebase'],
-    link: 'https://example.com',
+    title: 'DateBetter Quiz',
+    description: 'An interactive quiz application to help customers figure out what date flavor they should try basted on their love language; a result of taking the quiz.',
+    category: 'web',
+    skills: ['CSS', 'JavaScript', 'HTML'],
+    link: 'https://date-better.vercel.app',
+    github: 'https://github.com/JasmitaY/date-better',
   },
   {
     id: '3',
-    title: 'Project Three',
-    description: 'Data analysis and visualization platform.',
-    category: 'data',
-    skills: ['Python', 'Pandas', 'Matplotlib', 'SQL'],
-    github: 'https://github.com/example',
+    title: 'Budget Tracker',
+    description: 'An AI-powered budget tracking application to help users manage their finances and track spending.',
+    category: 'web',
+    skills: ['TypeScript', 'CSS', 'JavaScript', 'V0'],
+    link: 'https://budget-tracking-ai.vercel.app',
+    github: 'https://github.com/JasmitaY/budget-tracking-app',
   },
   {
     id: '4',
-    title: 'Project Four',
-    description: 'Full-stack application with modern architecture.',
+    title: 'USC Course Registration Schedule Helper',
+    description: 'A full-stack course scheduler that integrates with USC Schedule of Classes API to help students plan their course registration.',
     category: 'web',
-    skills: ['Node.js', 'Express', 'MongoDB', 'React'],
-    link: 'https://example.com',
-    github: 'https://github.com/example',
+    skills: ['Java', 'HTML', 'JavaScript', 'Python'],
+    github: 'https://github.com/JasmitaY/usc-course-registration',
+  },
+  {
+    id: '5',
+    title: 'bitByBit',
+    description: 'A beginner-friendly educational coding tool built with Next.js to help students practice fundamental programming concepts.',
+    category: 'web',
+    skills: ['JavaScript', 'Dockerfile'],
+    github: 'https://github.com/JasmitaY/bitByBIT',
+  },
+  // Mobile Projects
+  {
+    id: '6',
+    title: 'Vision',
+    description: 'A mobile application built with Swift and SwiftUI for iOS devices.',
+    category: 'mobile',
+    skills: ['Swift', 'SwiftUI'],
+    github: 'https://github.com/JasmitaY/Vision',
+  },
+  {
+    id: '7',
+    title: 'HerHair3.0',
+    description: 'A mobile application developed in Swift for iOS platforms.',
+    category: 'mobile',
+    skills: ['Swift'],
+    github: 'https://github.com/JasmitaY/HerHair3.0',
+  },
+  // Presentations
+  {
+    id: '8',
+    title: 'Introduction to Power BI',
+    description: 'An educational presentation introducing Power BI and its capabilities for data visualization and business intelligence.',
+    category: 'presentations',
+    skills: ['Power BI', 'Data Visualization'],
+    link: 'https://www.youtube.com/watch?v=xkArieXzmzE',
+  },
+  {
+    id: '9',
+    title: 'Oasis Pitch Deck',
+    description: 'A comprehensive pitch deck for Oasis, a computer vision-based home monitoring system designed to help families respond to falls faster.',
+    category: 'presentations',
+    skills: ['Figma', 'Product Design'],
+    link: 'https://embed.figma.com/proto/ZCuLMOVJfp889tbrbSkOth/Larvalab?node-id=1225-18921&starting-point-node-id=1225%3A18921&show-proto-sidebar=1&scaling=scale-down&content-scaling=fixed&t=WthIQAegWHz79rqn-9&embed-host=notion&footer=false&theme=system',
   },
 ];
 
-const categories = ['all', 'web', 'mobile', 'data', 'other'];
+const categories = ['all', 'web', 'mobile', 'presentations'];
 
 export default function Projects() {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -81,7 +125,7 @@ export default function Projects() {
                   : 'bg-[var(--foreground)]/10 text-[var(--foreground)] hover:bg-[var(--foreground)]/20'
               }`}
             >
-              {category.charAt(0).toUpperCase() + category.slice(1)}
+              {category === 'all' ? 'All' : category === 'presentations' ? 'Presentations' : category.charAt(0).toUpperCase() + category.slice(1)}
             </button>
           ))}
         </div>

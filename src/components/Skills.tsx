@@ -1,36 +1,59 @@
 'use client';
 
 const skills = {
-  'Programming Languages': [
+  'Languages': [
     'Python',
-    'JavaScript',
-    'TypeScript',
-    'Java',
     'C++',
+    'Java',
+    'HTML',
+    'CSS',
+    'JavaScript',
+    'C#',
+    'Dart',
+    'Swift',
     'SQL',
+    'KQL',
   ],
-  'Frameworks & Libraries': [
-    'React',
+  'Frameworks': [
     'Next.js',
-    'Node.js',
-    'Express',
-    'Django',
-    'Flask',
+    'React',
+    'Tailwind CSS',
+    '.NET',
+    'REST APIs',
   ],
-  'Tools & Technologies': [
+  'Tools & Platforms': [
     'Git',
-    'Docker',
-    'AWS',
-    'MongoDB',
-    'PostgreSQL',
-    'Firebase',
-  ],
-  'Design & Product': [
+    'GitHub',
+    'Power BI',
+    'Tableau',
+    'MySQL',
     'Figma',
-    'Product Management',
-    'UI/UX Design',
-    'Agile',
-    'Scrum',
+  ],
+  'AI Tools': [
+    'Cursor',
+    'Claude Code',
+    'Windsurf',
+    'GitHub Co-pilot',
+  ],
+  'Certifications': [
+    'Machine Learning',
+    'AWS',
+    'Power BI',
+    'Generative AI',
+    'Agentic AI',
+    'Blockchain',
+  ],
+  'Product Management Skills': [
+    'Data Analytics',
+    'Feature Prioritization',
+    'Product Strategy',
+    'Market Research',
+    'Cross-functional Collaboration',
+    'Storytelling',
+    'GTM',
+    'Customer Empathy',
+    'Stakeholder Management',
+    'Ambiguity Management',
   ],
 };
 
@@ -41,6 +64,8 @@ const interests = [
   'Open Source',
   'Reading',
   'Traveling',
+  'Soccer',
+  'Chess',
 ];
 
 export default function Skills() {
